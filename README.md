@@ -1,9 +1,9 @@
 # cpp_base
 
-#Run
+# Run
 
 cmake .
 
-#Run .exe
+# Run .exe
 
 ./build/Debug/app.exe
