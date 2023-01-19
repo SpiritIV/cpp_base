@@ -1,0 +1,14 @@
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/CMakeFiles/app.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/CMakeFiles/INSTALL.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/CMakeFiles/ALL_BUILD.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/CMakeFiles/ZERO_CHECK.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/CMakeFiles/INSTALL.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/CMakeFiles/ALL_BUILD.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googlemock/CMakeFiles/gmock.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googlemock/CMakeFiles/gmock_main.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googlemock/CMakeFiles/INSTALL.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googlemock/CMakeFiles/ALL_BUILD.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googletest/CMakeFiles/gtest.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googletest/CMakeFiles/gtest_main.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googletest/CMakeFiles/INSTALL.dir
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/googletest/googletest/CMakeFiles/ALL_BUILD.dir

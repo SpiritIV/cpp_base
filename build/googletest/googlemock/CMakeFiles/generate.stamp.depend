@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+D:/Program Files/CMake/share/cmake-3.25/Modules/CheckCSourceCompiles.cmake
+D:/Program Files/CMake/share/cmake-3.25/Modules/CheckIncludeFile.cmake
+D:/Program Files/CMake/share/cmake-3.25/Modules/CheckLibraryExists.cmake
+D:/Program Files/CMake/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake
+D:/Program Files/CMake/share/cmake-3.25/Modules/FindPackageMessage.cmake
+D:/Program Files/CMake/share/cmake-3.25/Modules/FindThreads.cmake
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/googletest/googlemock/CMakeLists.txt
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/googletest/googlemock/cmake/gmock.pc.in
+D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/googletest/googlemock/cmake/gmock_main.pc.in

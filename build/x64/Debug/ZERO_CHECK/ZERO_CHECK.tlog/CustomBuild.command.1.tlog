@@ -1,0 +1,10 @@
+^D:\VARIOUS_DATA\EDUCATION\РАЗРАБОТКА C++\CPP_HARD_MOMENTS\LESSON_8\GOOGLE_TEST\BUILD\CMAKEFILES\017D53ECE290F2459340A52B99C3C3D3\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" "-SD:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test" "-BD:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Various_data/Education/Разработка C++/CPP_hard_moments/lesson_8/google_test/build/app.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
