@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\Bomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\Ground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\House.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\LevelGUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\MyTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\Plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\SBomber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\src\Tank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\SBomberProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_2\my_sbomber\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1AEB0B22-CD49-3A3E-82D3-BFEA2401DA0E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
