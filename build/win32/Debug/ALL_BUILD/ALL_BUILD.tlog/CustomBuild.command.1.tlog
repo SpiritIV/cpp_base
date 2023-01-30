@@ -1,0 +1,10 @@
+^D:\VARIOUS_DATA\EDUCATION\РАЗРАБОТКА C++\EOF_PATTERNS\MY_SBOMBER\CMAKELISTS.TXT
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" "-SD:/Various_data/Education/Разработка C++/EOF_patterns/my_sbomber" "-BD:/Various_data/Education/Разработка C++/EOF_patterns/my_sbomber/build" --check-stamp-file "D:/Various_data/Education/Разработка C++/EOF_patterns/my_sbomber/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

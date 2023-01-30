@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Various_data\Education\Разработка C++\EOF_patterns\my_sbomber\build\CMakeFiles\e25c4879c8535739a541ecc054b5f4f9\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9A42D114-8349-3CA6-B9A3-3D5ED1ECDB2B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
