@@ -1,0 +1,3 @@
+D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_3/my_sbomber/build/CMakeFiles/sbomber.dir
+D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_3/my_sbomber/build/CMakeFiles/ALL_BUILD.dir
+D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_3/my_sbomber/build/CMakeFiles/ZERO_CHECK.dir
