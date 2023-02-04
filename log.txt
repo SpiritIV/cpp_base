@@ -1,2 +1,0 @@
-0. Sun Feb  5 00:04:36 2023 - SBomber::TimeStart was invoked
-1. Sun Feb  5 00:04:36 2023 - SBomber::DrawFrame was invoked
