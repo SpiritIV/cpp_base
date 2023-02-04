@@ -1,6 +1,6 @@
-^D:\VARIOUS_DATA\EDUCATION\РАЗРАБОТКА C++\EOF_PATTERNS\MY_SBOMBER\BUILD\CMAKEFILES\E25C4879C8535739A541ECC054B5F4F9\GENERATE.STAMP.RULE
+^D:\VARIOUS_DATA\EDUCATION\РАЗРАБОТКА C++\EOF_PATTERNS\LESSON_4\MY_SBOMBER\BUILD\CMAKEFILES\F3FAA122C37FF087175B80F177C0866E\GENERATE.STAMP.RULE
 setlocal
-"D:\Program Files\CMake\bin\cmake.exe" "-SD:/Various_data/Education/Разработка C++/EOF_patterns/my_sbomber" "-BD:/Various_data/Education/Разработка C++/EOF_patterns/my_sbomber/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Various_data/Education/Разработка C++/EOF_patterns/my_sbomber/build/sbomber.sln"
+"D:\Program Files\CMake\bin\cmake.exe" "-SD:/Various_data/Education/Разработка C++/EOF_patterns/lesson_4/my_sbomber" "-BD:/Various_data/Education/Разработка C++/EOF_patterns/lesson_4/my_sbomber/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_4/my_sbomber/build/sbomber.sln"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

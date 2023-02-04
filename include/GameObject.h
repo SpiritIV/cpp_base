@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-
 class GameObject {
 public:
 
@@ -9,13 +7,13 @@ public:
 
     virtual void Draw() const = 0;
 
-    virtual void SetPos(double nx, double ny) { this->x = nx; this->y = ny; };
+    inline void SetPos(double nx, double ny) { x = nx; y = ny; }
 
-    virtual double GetY() const { return y; }
-    virtual double GetX() const { return x; }
+    inline double GetY() const { return y; }
+    inline double GetX() const { return x; }
 
-    virtual void SetWidth(uint16_t widthN) { width = widthN; }
-    virtual uint16_t GetWidth() const { return (width); };
+    inline void SetWidth(uint16_t widthN) { width = widthN; }
+    inline uint16_t GetWidth() const { return width; }
 
 protected:
 

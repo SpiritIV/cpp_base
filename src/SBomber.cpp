@@ -62,6 +62,15 @@ SBomber::SBomber()
     pHouse->SetWidth(13);
     pHouse->SetPos(80, groundY - 1);
     vecStaticObj.push_back(pHouse);
+
+    /*
+    Bomb* pBomb = new Bomb;
+    pBomb->SetDirection(0.3, 1);
+    pBomb->SetSpeed(2);
+    pBomb->SetPos(51, 5);
+    pBomb->SetSize(SMALL_CRATER_SIZE);
+    vecDynamicObj.push_back(pBomb);
+    */
 }
 
 SBomber::~SBomber()
@@ -100,11 +109,13 @@ void SBomber::CheckObjects()
 {
     ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
 
-    CheckPlaneAndLevelGUI();
-    CheckBombsAndGround();
+    CollisionDetector   check_collisions;
+
+    check_collisions.CheckPlaneAndLevelGUI();
+    check_collisions.CheckBombsAndGround();
 };
 
-void SBomber::CheckPlaneAndLevelGUI()
+/* void SBomber::CheckPlaneAndLevelGUI()
 {
     if (FindPlane()->GetX() > FindLevelGUI()->GetFinishX())
     {
@@ -114,9 +125,7 @@ void SBomber::CheckPlaneAndLevelGUI()
 
 void SBomber::CheckBombsAndGround() 
 {
-	BombIterator	bomb_iterator(vecDynamicObj);
-    vector<Bomb*>	vecBombs = bomb_iterator.FindAllBombs();
-
+    vector<Bomb*> vecBombs = FindAllBombs();
     Ground* pGround = FindGround();
     const double y = pGround->GetY();
     for (size_t i = 0; i < vecBombs.size(); i++)
@@ -146,7 +155,7 @@ void SBomber::CheckDestoyableObjects(Bomb * pBomb)
             DeleteStaticObj(vecDestoyableObjects[i]);
         }
     }
-}
+} */
 
 void SBomber::DeleteDynamicObj(DynamicObject* pObj)
 {
@@ -215,7 +224,7 @@ Ground* SBomber::FindGround() const
     return nullptr;
 }
 
-/* vector<Bomb*> SBomber::FindAllBombs() const
+vector<Bomb*> SBomber::FindAllBombs() const
 {
     vector<Bomb*> vecBombs;
 
@@ -229,7 +238,7 @@ Ground* SBomber::FindGround() const
     }
 
     return vecBombs;
-} */
+}
 
 Plane* SBomber::FindPlane() const
 {
@@ -358,37 +367,3 @@ void SBomber::DropBomb()
         score -= Bomb::BombCost;
     }
 }
-
-/*----------------Home task----------------*/
-
-int				SBomber::begin()
-{
-    return (0);
-}
-
-int				SBomber::end()
-{
-	return (static_cast<int>(vecDynamicObj.size()));
-}
-
-void			TankAdaptee::SetPos(double nx, double ny)
-{
-	tank.SetPos(nx, ny);
-}
-
-uint16_t		TankAdaptee::GetWidth() const
-{
-	return tank.GetWidth();
-}
-
-void			TankAdaptee::Paint() const
-{
-	tank.Draw();
-};
-
-bool __fastcall	TankAdaptee::isInRange(double x1, double x2) const
-{
-	return (tank.isInside(x1, x2));
-};
-
-/*-----------------------------------------*/
