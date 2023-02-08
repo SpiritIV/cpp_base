@@ -1,10 +1,8 @@
-
 #include <conio.h>
 #include <windows.h>
 
 #include "../include/MyTools.h"
 #include "../include/SBomber.h"
-#include "../include/Bomb.h"
 #include "../include/Ground.h"
 #include "../include/Tank.h"
 #include "../include/House.h"
@@ -94,12 +92,13 @@ SBomber::~SBomber()
 
 void SBomber::MoveObjects()
 {
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+    // ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
 
     for (size_t i = 0; i < vecDynamicObj.size(); i++)
     {
         if (vecDynamicObj[i] != nullptr)
         {
+            vecDynamicObj[i]->Accept(_log_visitor);
             vecDynamicObj[i]->Move(deltaTime);
         }
     }
@@ -109,13 +108,11 @@ void SBomber::CheckObjects()
 {
     ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
 
-    CollisionDetector   check_collisions;
-
-    check_collisions.CheckPlaneAndLevelGUI();
-    check_collisions.CheckBombsAndGround();
+    CheckPlaneAndLevelGUI();
+    CheckBombsAndGround();
 };
 
-/* void SBomber::CheckPlaneAndLevelGUI()
+void SBomber::CheckPlaneAndLevelGUI()
 {
     if (FindPlane()->GetX() > FindLevelGUI()->GetFinishX())
     {
@@ -125,16 +122,17 @@ void SBomber::CheckObjects()
 
 void SBomber::CheckBombsAndGround() 
 {
-    vector<Bomb*> vecBombs = FindAllBombs();
-    Ground* pGround = FindGround();
-    const double y = pGround->GetY();
+    vector<Bomb*>	vecBombs = FindAllBombs();
+    Ground*			pGround = FindGround();
+    const double	y = pGround->GetY();
+
     for (size_t i = 0; i < vecBombs.size(); i++)
     {
         if (vecBombs[i]->GetY() >= y) // ����������� ����� � ������
         {
             pGround->AddCrater(vecBombs[i]->GetX());
-            CheckDestoyableObjects(vecBombs[i]);
-            DeleteDynamicObj(vecBombs[i]);
+            if (vecBombs[i]->AddObserver(FindDestoyableGroundObjects()))
+            	DeleteDynamicObj(vecBombs[i]);
         }
     }
 
@@ -155,7 +153,7 @@ void SBomber::CheckDestoyableObjects(Bomb * pBomb)
             DeleteStaticObj(vecDestoyableObjects[i]);
         }
     }
-} */
+}
 
 void SBomber::DeleteDynamicObj(DynamicObject* pObj)
 {
