@@ -1,4 +1,4 @@
-# Install script for directory: D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_5/my_sbomber
+# Install script for directory: D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_6/my_sbomber
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_5/my_sbomber/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_6/my_sbomber/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -2,13 +2,13 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_5\my_sbomber\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_5\my_sbomber\build\Debug\sbomber.exe</FullPath>
+      <FullPath>D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\build\Debug\sbomber.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_5\my_sbomber\build\x64\Debug\ALL_BUILD</FullPath>
+      <FullPath>D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\build\x64\Debug\ALL_BUILD</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

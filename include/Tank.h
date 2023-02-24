@@ -1,7 +1,7 @@
 #pragma once
 
 #include <stdint.h>
-
+#include "LevelGUI.h"
 #include "DestroyableGroundObject.h"
 
 class Tank : public DestroyableGroundObject
@@ -15,7 +15,7 @@ public:
 	void Draw() const override;
 
 private:
-
-	const uint16_t score = 30;
+	Mediator*			pMed;
+	const uint16_t		score = 30;
 };
 

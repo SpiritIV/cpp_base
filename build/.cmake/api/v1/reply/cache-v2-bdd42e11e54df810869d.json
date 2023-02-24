@@ -27,7 +27,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_5/my_sbomber/build"
+			"value" : "d:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_6/my_sbomber/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_5/my_sbomber/build/CMakeFiles/pkgRedirects"
+			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_6/my_sbomber/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_5/my_sbomber"
+			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_6/my_sbomber"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1027,7 +1027,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_5/my_sbomber/build"
+			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_6/my_sbomber/build"
 		},
 		{
 			"name" : "sbomber_IS_TOP_LEVEL",
@@ -1051,7 +1051,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_5/my_sbomber"
+			"value" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_6/my_sbomber"
 		}
 	],
 	"kind" : "cache",

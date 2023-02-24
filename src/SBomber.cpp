@@ -1,8 +1,10 @@
+
 #include <conio.h>
 #include <windows.h>
 
 #include "../include/MyTools.h"
 #include "../include/SBomber.h"
+#include "../include/Bomb.h"
 #include "../include/Ground.h"
 #include "../include/Tank.h"
 #include "../include/House.h"
@@ -23,9 +25,10 @@ SBomber::SBomber()
     ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
 
     Plane* p = new Plane;
-    p->SetDirection(1, 0.1);
-    p->SetSpeed(4);
-    p->SetPos(5, 10);
+    ColorPlane *colorPlane = new ColorPlane;
+    colorPlane->SetDirection(1, 0.1);
+    colorPlane->SetSpeed(4);
+    colorPlane->SetPos(5, 10);
     vecDynamicObj.push_back(p);
 
     LevelGUI* pGUI = new LevelGUI;
@@ -92,13 +95,12 @@ SBomber::~SBomber()
 
 void SBomber::MoveObjects()
 {
-    // ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
 
     for (size_t i = 0; i < vecDynamicObj.size(); i++)
     {
         if (vecDynamicObj[i] != nullptr)
         {
-            vecDynamicObj[i]->Accept(_log_visitor);
             vecDynamicObj[i]->Move(deltaTime);
         }
     }
@@ -122,17 +124,16 @@ void SBomber::CheckPlaneAndLevelGUI()
 
 void SBomber::CheckBombsAndGround() 
 {
-    vector<Bomb*>	vecBombs = FindAllBombs();
-    Ground*			pGround = FindGround();
-    const double	y = pGround->GetY();
-
+    vector<Bomb*> vecBombs = FindAllBombs();
+    Ground* pGround = FindGround();
+    const double y = pGround->GetY();
     for (size_t i = 0; i < vecBombs.size(); i++)
     {
         if (vecBombs[i]->GetY() >= y) // ����������� ����� � ������
         {
             pGround->AddCrater(vecBombs[i]->GetX());
-            if (vecBombs[i]->AddObserver(FindDestoyableGroundObjects()))
-            	DeleteDynamicObj(vecBombs[i]);
+            CheckDestoyableObjects(vecBombs[i]);
+            DeleteDynamicObj(vecBombs[i]);
         }
     }
 

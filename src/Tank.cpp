@@ -32,6 +32,8 @@ bool Tank::isInside(double x1, double x2) const
 
 void Tank::Draw() const
 {
+	pMed->AddMessage();
+
 	MyTools::SetColor(CC_Brown);
 	GotoXY(x, y - 3);
 	cout << "    #####";
