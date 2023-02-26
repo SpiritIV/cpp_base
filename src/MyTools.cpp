@@ -16,6 +16,9 @@ using namespace std;
 
 namespace MyTools {
 
+    ofstream logOut;
+
+    //=============================================================================================
 
     void ClrScr()
     {
@@ -65,132 +68,56 @@ namespace MyTools {
         SetConsoleTextAttribute(hConsole, color); // color =  (WORD)((BackgroundColor << 4) | TextColor))
     }
 
-}; // namespace MyTools
+    //=============================================================================================
 
-//FileLoggerSingletone definition
+    void __fastcall OpenLogFile(const string& FN)
+    {
+        logOut.open(FN, ios_base::out);
+    }
 
-FileLoggerSingletone	*FileLoggerSingletone::s_file = nullptr;
+    void CloseLogFile()
+    {
+        if (logOut.is_open())
+        {
+            logOut.close();
+        }
+    }
 
-FileLoggerSingletone	*FileLoggerSingletone::GetInstance(const std::string &path)
-{
-	if (s_file == nullptr)
-	{
+    string GetCurDateTime()
+    {
+        auto cur = std::chrono::system_clock::now();
+        time_t time = std::chrono::system_clock::to_time_t(cur);
+        char buf[64] = { 0 };
+        ctime_s(buf, 64, &time);
+        buf[strlen(buf) - 1] = '\0';
+        return string(buf);
+    }
 
-		s_file = new FileLoggerSingletone(path);
-	}
-	return (s_file);
-}
+    void __fastcall WriteToLog(const string& str)
+    {
+        if (logOut.is_open())
+        {
+            logOut << GetCurDateTime() << " - " << str << endl;
+        }
+    }
 
-std::string		FileLoggerSingletone::GetCurDateTime(void)
-{
-	auto	cur = std::chrono::system_clock::now();
-	time_t	time = std::chrono::system_clock::to_time_t(cur);
-	char	buf[64] = { 0 };
-        
-	ctime_s(buf, 64, &time);
-    buf[strlen(buf) - 1] = '\0';
-	return (string(buf));
-}
+    void __fastcall WriteToLog(const string& str, int n)
+    {
+        if (logOut.is_open())
+        {
+            logOut << GetCurDateTime() << " - " << str << n << endl;
+        }
+    }
 
-void __fastcall	FileLoggerSingletone::OpenLogFile(void)
-{
-	logOut.open(path_to_log, ios_base::out);
-}
+    void __fastcall WriteToLog(const string& str, double d)
+    {
+        if (logOut.is_open())
+        {
+            logOut << GetCurDateTime() << " - " << str << d << endl;
+        }
+    }
 
-void FileLoggerSingletone::CloseLogFile(void)
-{
-	if (logOut.is_open())
- 	{
-		logOut.close();
-	}
-}
+    //=============================================================================================
 
-void __fastcall FileLoggerSingletone::WriteToLog(const string& str)
-{
-    if (logOut.is_open())
-	{
-		logOut << GetCurDateTime() << " - " << str << endl;
-	}
-}
 
-void __fastcall FileLoggerSingletone::WriteToLog(const string& str, int n)
-{
-	if (logOut.is_open())
-	{
-		logOut << GetCurDateTime() << " - " << str << n << endl;
-	}
-}
-
-void __fastcall FileLoggerSingletone::WriteToLog(const string& str, double d)
-{
-	if (logOut.is_open())
-	{
-		logOut << GetCurDateTime() << " - " << str << d << endl;
-	}
-}
-
-//Modify logging
-
-ModifyLogging	*ModifyLogging::ancor_pointer = nullptr;
-int				ModifyLogging::index = 0;
-
-ModifyLogging	*ModifyLogging::GetInstance(const std::string &path)
-{
-	if (ancor_pointer == nullptr)
-	{
-
-		ancor_pointer = new ModifyLogging(path);
-	}
-	return (ancor_pointer);
-}
-
-std::string		ModifyLogging::GetCurDateTime(void)
-{
-	auto	cur = std::chrono::system_clock::now();
-	time_t	time = std::chrono::system_clock::to_time_t(cur);
-	char	buf[64] = { 0 };
-        
-	ctime_s(buf, 64, &time);
-    buf[strlen(buf) - 1] = '\0';
-	return (string(buf));
-}
-
-void __fastcall	ModifyLogging::OpenLogFile(void)
-{
-	logOut.open(path_to_log, ios_base::out);
-}
-
-void ModifyLogging::CloseLogFile(void)
-{
-	if (logOut.is_open())
- 	{
-		logOut.close();
-	}
-}
-
-void __fastcall ModifyLogging::WriteToLog(const string& str)
-{
-    if (logOut.is_open())
-	{
-		logOut << index << ". " <<GetCurDateTime() << " - " << str << endl;
-		++index;
-	}
-}
-
-void __fastcall ModifyLogging::WriteToLog(const string& str, int n)
-{
-	if (logOut.is_open())
-	{
-		logOut << index << ". " << GetCurDateTime() << " - " << str << n << endl;
-		++index;
-	}
-}
-
-void __fastcall ModifyLogging::WriteToLog(const string& str, double d)
-{
-	if (logOut.is_open())
-	{
-		logOut << index << ". " << GetCurDateTime() << " - " << str << d << endl;
-		++index;
-	}
-}
+} // namespace MyTools

@@ -7,27 +7,13 @@
 #include "Bomb.h"
 #include "Ground.h"
 #include "Tank.h"
+#include "SBomberImpl.h"
 
 class SBomber
 {
-public:
-
-    SBomber();
-    ~SBomber();
-    
-    inline bool GetExitFlag() const { return exitFlag; }
-
-    void ProcessKBHit();
-    void TimeStart();
-    void TimeFinish();
-
-    void DrawFrame();
-    void MoveObjects();
-    void CheckObjects();
-
 private:
 
-    void CheckPlaneAndLevelGUI();
+    void                    CheckPlaneAndLevelGUI();
     void CheckBombsAndGround();
     void __fastcall CheckDestoyableObjects(Bomb* pBomb);
 
@@ -45,9 +31,33 @@ private:
     std::vector<DynamicObject*> vecDynamicObj;
     std::vector<GameObject*> vecStaticObj;
     
-    bool exitFlag;
+    // bool exitFlag;
 
     uint64_t startTime, finishTime, passedTime;
     uint16_t bombsNumber, deltaTime, fps;
     int16_t score;
+
+public:
+
+    SBomber();
+    ~SBomber();
+    
+    inline bool GetExitFlag() const { return (sbImpl->getExitFlag()); }
+
+    void ProcessKBHit();
+    void TimeStart();
+    void TimeFinish();
+
+    void DrawFrame();
+    void MoveObjects();
+    void CheckObjects();
+
+private:
+	/* --------------------- Task 2 --------------------- */
+
+    class           SBomberImpl;
+    SBomberImpl*    sbImpl;
+
+    /* --------------------- Task 2 --------------------- */
+
 };

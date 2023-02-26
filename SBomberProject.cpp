@@ -10,10 +10,10 @@ using namespace std;
 
 int main(void)
 {
-    ILogging    *new_file = ModifyLogging::GetInstance("../../log.txt");
-    SBomber		game;
+    // MyTools::OpenLogFile("log.txt");
 
-    new_file->OpenLogFile();
+    SBomber game;
+
     do {
         game.TimeStart();
 
@@ -32,7 +32,7 @@ int main(void)
 
     } while (!game.GetExitFlag());
 
-    new_file->CloseLogFile();
+    // MyTools::CloseLogFile();
 
     return 0;
 }

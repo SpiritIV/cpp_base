@@ -8,27 +8,26 @@
 #include "../include/Ground.h"
 #include "../include/Tank.h"
 #include "../include/House.h"
+#include "../include/SBomberImpl.h"
 
 using namespace std;
 using namespace MyTools;
 
-SBomber::SBomber()
-    : exitFlag(false),
-    startTime(0),
-    finishTime(0),
-    deltaTime(0),
-    passedTime(0),
-    fps(0),
-    bombsNumber(10),
-    score(0)
+SBomber::SBomber() :	sbImpl(new SBomberImpl),
+						startTime(0),
+						finishTime(0),
+						deltaTime(0),
+						passedTime(0),
+						fps(0),
+						bombsNumber(10),
+    					score(0)
 {
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+    WriteToLog(string(__FUNCTION__) + " was invoked");
 
     Plane* p = new Plane;
-    ColorPlane *colorPlane = new ColorPlane;
-    colorPlane->SetDirection(1, 0.1);
-    colorPlane->SetSpeed(4);
-    colorPlane->SetPos(5, 10);
+    p->SetDirection(1, 0.1);
+    p->SetSpeed(4);
+    p->SetPos(5, 10);
     vecDynamicObj.push_back(p);
 
     LevelGUI* pGUI = new LevelGUI;
@@ -95,7 +94,7 @@ SBomber::~SBomber()
 
 void SBomber::MoveObjects()
 {
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+    WriteToLog(string(__FUNCTION__) + " was invoked");
 
     for (size_t i = 0; i < vecDynamicObj.size(); i++)
     {
@@ -108,7 +107,7 @@ void SBomber::MoveObjects()
 
 void SBomber::CheckObjects()
 {
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+    WriteToLog(string(__FUNCTION__) + " was invoked");
 
     CheckPlaneAndLevelGUI();
     CheckBombsAndGround();
@@ -118,7 +117,8 @@ void SBomber::CheckPlaneAndLevelGUI()
 {
     if (FindPlane()->GetX() > FindLevelGUI()->GetFinishX())
     {
-        exitFlag = true;
+        sbImpl->setExitFlag(true);
+        // exitFlag = true;
     }
 }
 
@@ -276,12 +276,12 @@ void SBomber::ProcessKBHit()
         c = _getch();
     }
 
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked. key = ", c);
+    WriteToLog(string(__FUNCTION__) + " was invoked. key = ", c);
 
     switch (c) {
 
     case 27: // esc
-        exitFlag = true;
+        sbImpl->setExitFlag(true);
         break;
 
     case 72: // up
@@ -307,7 +307,8 @@ void SBomber::ProcessKBHit()
 
 void SBomber::DrawFrame()
 {
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+    WriteToLog(string(__FUNCTION__) + " was invoked");
+
     for (size_t i = 0; i < vecDynamicObj.size(); i++)
     {
         if (vecDynamicObj[i] != nullptr)
@@ -332,7 +333,7 @@ void SBomber::DrawFrame()
 
 void SBomber::TimeStart()
 {
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+    WriteToLog(string(__FUNCTION__) + " was invoked");
     startTime = GetTickCount64();
 }
 
@@ -342,14 +343,14 @@ void SBomber::TimeFinish()
     deltaTime = uint16_t(finishTime - startTime);
     passedTime += deltaTime;
 
-    ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " deltaTime = ", (int)deltaTime);
+    WriteToLog(string(__FUNCTION__) + " deltaTime = ", (int)deltaTime);
 }
 
 void SBomber::DropBomb()
 {
     if (bombsNumber > 0)
     {
-        ModifyLogging::GetInstance(string(__FUNCTION__))->WriteToLog(string(__FUNCTION__) + " was invoked");
+        WriteToLog(string(__FUNCTION__) + " was invoked");
 
         Plane* pPlane = FindPlane();
         double x = pPlane->GetX() + 4;

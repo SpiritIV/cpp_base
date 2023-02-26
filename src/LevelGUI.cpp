@@ -2,7 +2,6 @@
 
 #include "../include/LevelGUI.h"
 #include "../include/MyTools.h"
-#include <random>
 
 using namespace std;
 using namespace MyTools;
@@ -10,15 +9,6 @@ using namespace MyTools;
 void LevelGUI::Draw() const
 {
     MyTools::SetColor(CC_White);
-
-    /*--------------------Homework--------------------*/
-
-    if (pMediator->GetSize())
-    {
-        std::cout << pMediator->GetMsg() << std::endl;
-    }
-
-    /*--------------------Homework--------------------*/
 
     GotoXY(x, y);
     char* buf = new (nothrow) char[width + 1];
@@ -59,12 +49,3 @@ void __fastcall LevelGUI::SetParam(uint64_t passedTimeNew, uint64_t fpsNew, uint
     bombsNumber = bombsNumberNew;
     score = scoreNew;
 }
-
-/*--------------------Homework--------------------*/
-
-void    Mediator::AddMessage()
-{
-    queue_of_msgs.push_back(randomPhrase[std::rand()%queue_of_msgs.size()]);
-}
-
-/*--------------------Homework--------------------*/

@@ -1,40 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\Bomb.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\SBomberImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\Ground.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\Logging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\House.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\Bomb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\LevelGUI.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\Ground.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\MyTools.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\House.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\Plane.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\LevelGUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\SBomber.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\MyTools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\src\Tank.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\Plane.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\SBomberProject.cpp">
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\SBomber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\src\Tank.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\SBomberProject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_6\my_sbomber\CMakeLists.txt" />
+    <CustomBuild Include="D:\Various_data\Education\Разработка C++\EOF_patterns\lesson_7\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{16307753-060C-305F-8715-7696A2AB072A}</UniqueIdentifier>
+      <UniqueIdentifier>{3590C3C2-E848-387D-9D6C-3480BC867399}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -2,12 +2,10 @@
 
 #include <stdint.h>
 #include <string>
-#include <fstream>
-#include <iostream>
 
 namespace MyTools {
 
-    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 0 пїЅпїЅ 15
+    // Палитра цветов от 0 до 15
     enum ConsoleColor
     {
         CC_Black = 0,
@@ -40,67 +38,18 @@ namespace MyTools {
 
     void SetColor(ConsoleColor color);
 
-};
+	//=============================================================================================
 
-//Proxy for logging
+	void __fastcall OpenLogFile(const std::string& FN);
 
-class ILogging
-{
-public:
-	virtual void __fastcall	OpenLogFile(void) = 0;
-    virtual void			CloseLogFile(void) = 0;
-    virtual void __fastcall	WriteToLog(const std::string& str) = 0;
-    virtual void __fastcall	WriteToLog(const std::string& str, int n) = 0;
-    virtual void __fastcall WriteToLog(const std::string& str, double d) = 0;
-	virtual std::string		GetCurDateTime(void) = 0;
-};
+	void CloseLogFile();
 
-//Logging singletone
+	void __fastcall WriteToLog(const std::string& str);
 
-class FileLoggerSingletone : public ILogging
-{
-private:
-	std::ofstream               logOut;
-    std::string     			path_to_log;
-    static FileLoggerSingletone	*s_file;
+	void __fastcall WriteToLog(const std::string& str, int n);
 
-    FileLoggerSingletone(const std::string _path) : path_to_log(_path) {}
-    FileLoggerSingletone(FileLoggerSingletone &) = delete;
-	~FileLoggerSingletone() {if (s_file != nullptr) { delete s_file; }; };
-    
-    void    operator=(const FileLoggerSingletone &) = delete;
+	void __fastcall WriteToLog(const std::string& str, double d);
 
-public:
-	static FileLoggerSingletone	*GetInstance(const std::string &path);
+	//=============================================================================================
 
-	std::string		GetCurDateTime(void);
-
-	void __fastcall			OpenLogFile(void);
-    void					CloseLogFile(void);
-    void __fastcall	WriteToLog(const std::string& str);
-    void __fastcall	WriteToLog(const std::string& str, int n);
-    void __fastcall WriteToLog(const std::string& str, double d);
-};
-
-class ModifyLogging : public ILogging
-{
-private:
-    static int		index;		
-	std::ofstream	logOut;
-    std::string		path_to_log;
-
-	ModifyLogging(const std::string _path) : path_to_log(_path) {}
-    ModifyLogging(ModifyLogging &) = delete;
-	void	operator=(ModifyLogging &) = delete;
-    static      ModifyLogging   *ancor_pointer;
-public:
-    static ModifyLogging   *GetInstance(const std::string &path);
-
-	std::string		GetCurDateTime(void);
-
-	void __fastcall	OpenLogFile(void);
-    void			CloseLogFile(void);
-    void __fastcall	WriteToLog(const std::string& str);
-    void __fastcall	WriteToLog(const std::string& str, int n);
-    void __fastcall WriteToLog(const std::string& str, double d);
 };
