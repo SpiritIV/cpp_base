@@ -10,11 +10,11 @@ using namespace std;
 
 int main(void)
 {
-    // MyTools::OpenLogFile("log.txt");
+    MyTools::OpenLogFile("log.txt");
 
     SBomber game;
 
-    do {
+ /*    do {
         game.TimeStart();
 
         if (_kbhit())
@@ -30,9 +30,9 @@ int main(void)
 
         game.TimeFinish();
 
-    } while (!game.GetExitFlag());
-
-    // MyTools::CloseLogFile();
+    } while (!game.GetExitFlag()); */
+    game.AnimateScrolling();
+    MyTools::CloseLogFile();
 
     return 0;
 }

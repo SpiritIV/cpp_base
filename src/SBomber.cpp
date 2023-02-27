@@ -8,19 +8,19 @@
 #include "../include/Ground.h"
 #include "../include/Tank.h"
 #include "../include/House.h"
-#include "../include/SBomberImpl.h"
 
 using namespace std;
 using namespace MyTools;
 
-SBomber::SBomber() :	sbImpl(new SBomberImpl),
-						startTime(0),
-						finishTime(0),
-						deltaTime(0),
-						passedTime(0),
-						fps(0),
-						bombsNumber(10),
-    					score(0)
+SBomber::SBomber()
+    : exitFlag(false),
+    startTime(0),
+    finishTime(0),
+    deltaTime(0),
+    passedTime(0),
+    fps(0),
+    bombsNumber(10),
+    score(0)
 {
     WriteToLog(string(__FUNCTION__) + " was invoked");
 
@@ -117,8 +117,7 @@ void SBomber::CheckPlaneAndLevelGUI()
 {
     if (FindPlane()->GetX() > FindLevelGUI()->GetFinishX())
     {
-        sbImpl->setExitFlag(true);
-        // exitFlag = true;
+        exitFlag = true;
     }
 }
 
@@ -281,7 +280,7 @@ void SBomber::ProcessKBHit()
     switch (c) {
 
     case 27: // esc
-        sbImpl->setExitFlag(true);
+        exitFlag = true;
         break;
 
     case 72: // up

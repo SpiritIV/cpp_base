@@ -13,3 +13,14 @@ void Bomb::Draw() const
     GotoXY(x, y);
     cout << "*";
 }
+
+/* ------------------ Task 1 ------------------ */
+
+Bomb*	Bomb::clone()
+{
+    x -= 1;
+
+    return (this);
+};
+
+/* ------------------ Task 1 ------------------ */

@@ -1,3 +1,3 @@
-D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_7/build/CMakeFiles/sbomber.dir
-D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_7/build/CMakeFiles/ALL_BUILD.dir
-D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_7/build/CMakeFiles/ZERO_CHECK.dir
+D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_8/build/CMakeFiles/sbomber.dir
+D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_8/build/CMakeFiles/ALL_BUILD.dir
+D:/Various_data/Education/Разработка C++/EOF_patterns/lesson_8/build/CMakeFiles/ZERO_CHECK.dir

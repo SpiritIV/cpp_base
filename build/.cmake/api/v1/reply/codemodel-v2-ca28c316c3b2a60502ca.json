@@ -50,14 +50,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-Debug-19bfea0e8bd7fbd18965.json",
+					"jsonFile" : "target-ZERO_CHECK-Debug-30c78df7896a28da3458.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "sbomber::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sbomber-Debug-3ca70b81595ef67e5304.json",
+					"jsonFile" : "target-sbomber-Debug-17ad68f070bf04c8de59.json",
 					"name" : "sbomber",
 					"projectIndex" : 0
 				}
@@ -112,14 +112,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-Release-19bfea0e8bd7fbd18965.json",
+					"jsonFile" : "target-ZERO_CHECK-Release-30c78df7896a28da3458.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "sbomber::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sbomber-Release-12d639b1169f6d983e6c.json",
+					"jsonFile" : "target-sbomber-Release-93df5a612a1c42274335.json",
 					"name" : "sbomber",
 					"projectIndex" : 0
 				}
@@ -174,14 +174,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-19bfea0e8bd7fbd18965.json",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-30c78df7896a28da3458.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "sbomber::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sbomber-MinSizeRel-86439e2ba2b67ccc7e3a.json",
+					"jsonFile" : "target-sbomber-MinSizeRel-0d4683532fb97bb44e63.json",
 					"name" : "sbomber",
 					"projectIndex" : 0
 				}
@@ -236,14 +236,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-19bfea0e8bd7fbd18965.json",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-30c78df7896a28da3458.json",
 					"name" : "ZERO_CHECK",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "sbomber::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sbomber-RelWithDebInfo-d536ec06bc8bcbb0963d.json",
+					"jsonFile" : "target-sbomber-RelWithDebInfo-7459f0854398e2583de0.json",
 					"name" : "sbomber",
 					"projectIndex" : 0
 				}
@@ -253,8 +253,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_7/build",
-		"source" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_7"
+		"build" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_8/build",
+		"source" : "D:/Various_data/Education/\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 C++/EOF_patterns/lesson_8"
 	},
 	"version" : 
 	{
